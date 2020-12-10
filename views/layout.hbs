@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Translator</title>
+	<link rel='stylesheet' href='/stylesheets/styles.css' />
+</head>
+
+<body>
+	<div class="content">
+		<h2 class="title-h2">Translator</h2>
+		<h5 class="title-h5">with Yandex translator API</h5>
+		<form method="POST" action="/translate" class="form">
+			<input name="texts" autofocus id="texts" type='text' class="text-input">
+			<input name="sourceLanguageCode" id="sourceLanguageCode" type="text" value="ru" class="settings">
+			<input name="targetLanguageCode" id="targetLanguageCode" type="text" value="en" class="settings">
+			<button type="submit">Translate</button>
+		</form>
+		<h3 class="result">{{ result }}</h3>
+		<h3 class="error">{{error}}</h3>
+	</div>
+</body>
+
+</html>
