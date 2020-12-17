@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h1>News from Habr</h1>
+	<div>
+		<form action="/news" method="POST">
+			<input type="text" name="newsCount" placeholder="news count" value={{newsCount}}>
+			<button type="submit">get news</button>
+		</form>
+		<ul>
+			{{#if news}}
+				{{#each news}}
+					<li>{{this}}</li>
+				{{/each}}
+			{{/if}}
+		</ul>
+	</div>
+</body>
+</html>
