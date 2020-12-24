@@ -1,0 +1,12 @@
+<div>
+
+	<a href="/">back</a>
+
+    <form action="/edit/{{ todo.id }}?_method=PUT" method="POST">
+        <div>
+            <textarea name="text" id="text" cols="30" rows="8">{{ todo.text }}</textarea>
+            <button type="submit">Edit</button>
+        </div>
+    </form>
+
+</div>

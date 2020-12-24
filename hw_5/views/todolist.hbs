@@ -1,0 +1,16 @@
+<div class="content">
+
+	<a href="/newTodo" class="add_btn"><span class="btn-text">New todo</span></a>
+
+	{{#each todos}}
+	<div class="todoItem item">
+		<p class="item__text">{{this.text}}</p>
+		<div class="item__btns">
+			<a href="/edit/{{this.id}}" class="edit_btn"><span class="btn-text">Edit</span></a>
+			<form action="/{{this.id}}?_method=DELETE" method="POST">
+				<button type="submit">Delete</button>
+			</form>
+		</div>
+	</div>
+	{{/each}}
+</div>
