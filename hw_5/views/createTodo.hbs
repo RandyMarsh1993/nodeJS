@@ -1,0 +1,12 @@
+<div>
+
+	<a href="/" class="btn"><span class="btn-text">to list</span></a>
+	<form action="/newTodo" method="POST">
+        <div class="newTodo">
+            <label for="text" class="newTodo__label">New todo</label>
+            <textarea name="text" id="text" cols="30" rows="5" >{{ todo.text }}</textarea>
+            <button type="submit" class="add_btn"><span class="btn-text">Add todo</span></button>
+        </div>
+	</form>
+
+</div>
