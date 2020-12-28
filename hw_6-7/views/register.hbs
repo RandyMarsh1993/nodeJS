@@ -1,0 +1,19 @@
+<div class="content">
+    <h4>Регистрация</h4>
+    {{!-- <div>{{{messages}}}</div> --}}
+    <form action="/register" method="POST">
+        <label for="email" class="login__label">Адресс электронной почты</label>
+        <input required type="email" name="email" id="email" tabindex="1">
+
+        <label for="pass" class="login__label">Пароль</label>
+        <input required type="password" name="pass" id="pass" tabindex="2">
+        <label for="pass">Повторите пароль</label>
+        <input required type="password" name="pass2" id="pass2">
+        <button type="submit">submit</button>
+    </form>
+
+    <div class="login__form register_wrap">
+        <p class="register_text">Уже зарегестрированы?</p>
+        <a href="/login" class="register_link">Войти</a>
+    </div>
+</div>
