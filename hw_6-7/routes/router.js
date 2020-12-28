@@ -4,7 +4,9 @@ const router = express.Router();
 const Todo = require('../models/TodoList');
 const createTodoAndRedirect = require('../controllers/addTodo');
 
-router.get('/', async (req, res) => {
+const { ensureAuthenticated } = require('../middlewares/isAuth');
+
+router.get('/', ensureAuthenticated, async (req, res) => {
 	let todos = await Todo.find().sort('-date');
 	res.render('todolist', {todos: todos});
 });
